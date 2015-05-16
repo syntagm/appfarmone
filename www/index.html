@@ -9,10 +9,16 @@
 
   <link href="css/ionic.app.css" rel="stylesheet">
   <link href="css/ionicons.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 
 
   <script src="js/ionic.bundle.min.js"></script>
   <script src="js/script.js"></script>
+
+
+  <link href="css/ionic.css" rel="stylesheet">
+  <script src="js/ionic.bundle.js"></script>
+
 
 </head>
 
@@ -117,35 +123,46 @@
   <script id="contact.html" type="text/ng-template">
     <ion-view title="Contact">
     <ion-content>
-Some content to be added!
+    <ion-slide-box>
+      <ion-slide>
+        <div class="color-red">slide >> to Yellow</div>        
+      </ion-slide>
+      <ion-slide>
+        <div class="color-yellow">slide >> to PINK</div>
+      </ion-slide>
+      <ion-slide>
+        <div class="color-pink">PINK</div>
+      </ion-slide>
+    </ion-slide-box>
+    </ion-content>
 <br><br><br>
 <div class="card">
   <div class="item item-text-wrap">
-    This card has wrapping text.
+    This card has wrapping text and can also take you
+    <a nav-transition="none" href="#/home">Home</a>
   </div>
 </div>
 <div class="list card">
 
-  <a href="#" class="item item-icon-left">
+  <a href="#/home" class="item item-icon-left">
     <i class="icon ion-home"></i>
-    Enter home address
+    HOME
   </a>
 
   <a href="#" class="item item-icon-left">
     <i class="icon ion-ios-telephone"></i>
-    Enter phone number
+    Our phone number: 082456701
   </a>
 
   <a href="#" class="item item-icon-left">
-    <i class="icon ion-wifi"></i>
-    Enter wireless password
+    <i class="icon ion-email"></i>
+    Our email: chris@appfarm.co.za
   </a>
 
   <a href="#" class="item item-icon-left">
-    <i class="icon ion-card"></i>
-    Enter card information
+    <i class="icon ion-social-twitter"></i>
+    @capeasuf
   </a>
-
 </div>
 </ion-content>
 <ion-footer-bar align-title="left" class="bar-dark">
@@ -159,6 +176,5 @@ Some content to be added!
 </ion-footer-bar>
     </ion-view>
   </script>
-
 </body>
 </html>

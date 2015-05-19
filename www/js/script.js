@@ -33,6 +33,14 @@ angular.module('ionicApp', ['ionic'])
         }
       }
     })
+    .state('tabs.facts3', {
+      url: "/facts3",
+      views: {
+        'home-tab': {
+          templateUrl: "facts3.html"
+        }
+      }
+    })
     .state('tabs.about', {
       url: "/about",
       views: {

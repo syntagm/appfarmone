@@ -11,16 +11,20 @@
   <link href="css/ionicons.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 
-
   <script src="js/ionic.bundle.min.js"></script>
   <script src="js/script.js"></script>
 
-
   <link href="css/ionic.css" rel="stylesheet">
   <script src="js/ionic.bundle.js"></script>
-
+  <!-- Before cordova.js -->
+  <script src="lib/sha.js"></script>
+  <script src="lib/angular-resource/angular-resource.js"></script>
   <script src="lib/ngCordova/dist/ng-cordova.js"></script>
+
   <script src="cordova.js"></script>
+  <!-- After cordova.js -->
+  <script src="js/controllers.js"></script>
+  <script src="js/services.js"></script>
 
 
 
@@ -42,11 +46,11 @@
         <ion-nav-view name="home-tab"></ion-nav-view>
       </ion-tab>
 
-      <ion-tab title="About" icon="ion-information" href="#/tab/about">
+      <ion-tab title="About" icon="ion-information-circled" href="#/tab/about">
         <ion-nav-view name="about-tab"></ion-nav-view>
       </ion-tab>
 
-      <ion-tab title="Contact" icon="ion-world" ui-sref="tabs.contact">
+      <ion-tab title="Contact" icon="ion-person-add" ui-sref="tabs.contact">
         <ion-nav-view name="contact-tab"></ion-nav-view>
       </ion-tab>
 
@@ -57,29 +61,52 @@
     <ion-view title="appFarm One">
       <ion-content class="padding">
         <center>
-        <h3> Welcome to our DEMO app</h4>
-        <h4>Example of tabs. <br><br> Navigate to each tab, and
-        navigate to child views of each tab and notice how
-        each tab has its own navigation history.</h4>
+        <h3> Welcome to agri360</h4>
+        <h4>Crowd-sourcing at work for you. <br><br> agri360 is an initiative of appFarm and CapeASUF</h4>
+        <h4>We are primary producers and we support each other and in particular new entrants into agriculture. </h4>
         <p></center><br><br>
-          <a class="button icon icon-right ion-chevron-right" href="#/tab/facts">Trivial Facts</a>
+          <a href="#/tab/facts" class="item item-icon-left">
+          <i class="icon ion-email"></i>
+          Ask eMAIL support
+        </a>
+        <br>
+         <a href="#/tab/facts2" class="item item-icon-left">
+         <i class="icon ion-paper-airplane"></i>
+        Register for PUSH notification
+        </a>
+        <br>
+         <a href="tweets.html" class="item item-icon-left">
+         <i class="icon ion-social-twitter"></i>
+        See our TWEETS
+        </a>
+        <br>
+         <a href="#/tab/facts" class="item item-icon-left">
+         <i class="icon ion-lightbulb"></i>
+        Search the FAQs
+       </a>
+       <br>
+  <a href="#/tab/facts" class="item item-icon-left">
+  <i class="icon ion-camera"></i>
+  Upload a new PIC
+</a>
+<br>
+
+      <!--<a class="button icon icon-right ion-chevron-right" href="#/tab/facts">Trivial Facts</a>-->
         </p>
       </ion-content>
     </ion-view>
   </script>
 
   <script id="facts.html" type="text/ng-template">
-    <ion-view title="Facts" class="padding">
+    <ion-view title="eMAIL" class="padding">
       <ion-content>
         <center>
-        <br><br><h4>Banging your head against a wall uses 150 calories an hour.</h4>
-        <h4>Dogs have four toes on their hind feet, and five on their front feet.</h4>
-        <h4>The ant can lift 50 times its own weight, can pull 30 times its own weight and always falls over on its right side when intoxicated.</h4>
-        <h4>A cockroach will live nine days without its head, before it starves to death.</h4>
-        <h4>Polar bears are left handed.</p> </center><br><br>
-        <h4>
+        <br><br>
+        <h4>Under construction</h4>
+        </center><br><br>
+
           <a class="button icon ion-home" href="#/tab/home"> Home</a>
-          <a class="button icon icon-right ion-chevron-right" href="#/tab/facts2">More profound Facts</a>
+          <!--<a class="button icon icon-right ion-chevron-right" href="#/tab/facts2">More profound Facts</a>-->
         </h4>
       </ion-content>
     </ion-view>
@@ -101,6 +128,17 @@
         </p>
       </ion-content>
     </ion-view>
+  </script>
+
+  <script id="tweets.html" type="">
+    <ion-view title="Also Factual">
+    </ion-view>
+    <br>
+
+        <ion-content>
+        <p> Hello Twitter </p>
+        </ion-content>
+
   </script>
 
   <script id="about.html" type="text/ng-template">
@@ -141,6 +179,7 @@
     </ion-content>
 <br><br><br>
 <div class="card">
+<br><br><br>
   <div class="item item-text-wrap">
     This card has wrapping text and can also take you
     <a nav-transition="none" href="#/home">Home</a>

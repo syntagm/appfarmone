@@ -10,11 +10,10 @@
   <link href="css/ionic.app.css" rel="stylesheet">
   <link href="css/ionicons.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
+  <link href="css/ionic.css" rel="stylesheet">
 
   <script src="js/ionic.bundle.min.js"></script>
   <script src="js/script.js"></script>
-
-  <link href="css/ionic.css" rel="stylesheet">
   <script src="js/ionic.bundle.js"></script>
   <!-- Before cordova.js -->
   <script src="lib/sha.js"></script>
@@ -75,7 +74,7 @@
         Register for PUSH notification
         </a>
         <br>
-         <a href="tweets.html" class="item item-icon-left">
+         <a href="http://www.casuf.co.za" class="item item-icon-left">
          <i class="icon ion-social-twitter"></i>
         See our TWEETS
         </a>
@@ -130,15 +129,33 @@
     </ion-view>
   </script>
 
-  <script id="tweets.html" type="">
-    <ion-view title="Also Factual">
-    </ion-view>
-    <br>
-
-        <ion-content>
-        <p> Hello Twitter </p>
-        </ion-content>
-
+  <script id="facts3.html" type="text/ng-template">
+  <ion-view title="Also Factual">
+    <ion-content class="padding">
+      <center>
+      <p> hello tweets</p>
+      <a class="twitter-timeline"href="https://twitter.com/CapeAsuf"data-widget-id="574142555648094208">Tweets by @CapeAsuf</a>
+      <script>
+        !function(d,s,id){
+        var js,
+        fjs=d.getElementsByTagName(s)[0],
+        p=/^http:/.test(d.location)?'http':'https';
+        if(!d.getElementById(id))
+        {
+          js=d.createElement(s);
+          js.id=id;
+          js.src=p+"://platform.twitter.com/widgets.js";
+          fjs.parentNode.insertBefore(js,fjs);
+          }
+          }(document,"script","twitter-wjs");
+      </script>
+      </center>
+      <p>
+        <a class="button icon ion-home" href="#/tab/home"> Home</a>
+        <a class="button icon ion-chevron-left" href="#/tab/facts"> old Facts</a>
+      </p>
+    </ion-content>
+  </ion-view>
   </script>
 
   <script id="about.html" type="text/ng-template">

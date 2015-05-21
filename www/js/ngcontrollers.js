@@ -1,7 +1,9 @@
 // JavaScript Document
-angular.module('starter').controller('AppCtrl', function($scope, $ionicPlatform, $ionicPopup, TwitterService) {
+// angular.module('starter').controller('AppCtrl', function($scope, $ionicPlatform, $ionicPopup, TwitterService) {
             // Should we show the post tweet button
-            $scope.showUpdateStatus = true;
+          //  $scope.showUpdateStatus = true;
+angular.module('starter')
+.controller('AppCtrl', function($scope, $ionicPlatform, TwitterService) {
             // 1
             $scope.correctTimestring = function(string) {
                 return new Date(Date.parse(string));

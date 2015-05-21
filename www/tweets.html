@@ -1,4 +1,4 @@
-DOCTYPE html>
+<DOCTYPE html>
 <html ng-app="ionicApp">
 <head>
 
@@ -10,50 +10,41 @@ DOCTYPE html>
   <link href="css/ionic.app.css" rel="stylesheet">
   <link href="css/ionicons.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
+  <link href="css/ionic.css" rel="stylesheet">
 
   <script src="js/ionic.bundle.min.js"></script>
   <script src="js/script.js"></script>
-
-  <link href="css/ionic.css" rel="stylesheet">
   <script src="js/ionic.bundle.js"></script>
   <!-- Before cordova.js -->
   <script src="lib/sha.js"></script>
-  <script src="lib/angular-resource.js"></script>
+  <script src="lib/angular-resource/angular-resource.js"></script>
   <script src="lib/ngCordova/dist/ng-cordova.js"></script>
-
   <script src="cordova.js"></script>
   <!-- After cordova.js -->
-  <script src="js/ngcontrollers.js"></script>
-  <script src="js/ngservices.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/filters.js"></script>
   <script src="js/app.js"></script>
-
 
 </head>
 
-<body ng-app="starter" ng-controller='AppCtrl'>
-  <ion-pane>
-    <ion-header-bar class="bar-positive">
-      <h1 class="title">My Twitter Feed</h1>
-    </ion-header-bar>
-    <ion-content class="has-header padding">
-      <ion-refresher on-refresh="doRefresh()"></ion-refresher>
-
-    <div ng-show="home_timeline.length == 0">Loading tweets...</div>
-
-    <div ng-repeat="entry in home_timeline" class="list card">
-      <div class="item item-avatar">
-        <img ng-src="{{entry.user.profile_image_url}}"/>
-        <h2>{{entry.user.name}}</h2>
-        <p>{{correctTimestring(entry.created_at) | date:'medium'}}</p>
-      </div>
-
-      <div class="item item-body">
-        <p ng-bind-html="entry.text"></p>
-        <img ng-if="entry.extended_entities" ng-src="{{ entry.extended_entities.media[0].media_url }}" style="width: 100%;"/>
-      </div>
-
-    </div>
-  </ion-content>
-</ion-pane>
-</body>
+  <body ng-app="twitterFeed">
+    <ion-nav-view>
+      <a class="twitter-timeline"href="https://twitter.com/CapeAsuf"data-widget-id="574142555648094208">Tweets by @CapeAsuf</a>
+      <script>
+        !function(d,s,id){
+        var js,
+        fjs=d.getElementsByTagName(s)[0],
+        p=/^http:/.test(d.location)?'http':'https';
+        if(!d.getElementById(id))
+        {
+          js=d.createElement(s);
+          js.id=id;
+          js.src=p+"://platform.twitter.com/widgets.js";
+          fjs.parentNode.insertBefore(js,fjs);
+          }
+          }(document,"script","twitter-wjs");
+      </script>
+    </ion-nav-view>
+  </body>
 </html>

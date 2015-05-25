@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="com.ionicframework.appfarmone871417" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="za.co.syntagm.appfarmone" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
   <name>appfarmone</name>
-  <description>&#xD;
-        A synAPPS Ionic project.&#xD;
+  <description>
+        A synAPPS Ionic project
     </description>
-  <author email="chris@appfarm.co.za" href="http://www.appfarm.co.za/">&#xD;
-      Ionic Framework Team&#xD;
+  <author email="chris@appfarm.co.za" href="http://www.appfarm.co.za/">
+      Ionic Framework Team
     </author>
   <content src="index.html"/>
   <access origin="*"/>

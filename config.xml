@@ -51,7 +51,7 @@
 
     <!-- Core plugins -->
     <gap:plugin name="org.apache.cordova.battery-status" />
-    <gap:plugin name="com.pushwoosh.plugins.pushwoosh" version="3.0.2" />
+    <gap:plugin name="com.pushwoosh.plugins.pushwoosh" source="plugins.cordova.io" />
     <gap:plugin name="org.apache.cordova.console" />
     <gap:plugin name="org.apache.cordova.device" />
     <gap:plugin name="org.apache.cordova.splashscreen" />

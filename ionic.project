@@ -1,5 +1,5 @@
 {
-  "name": "appfarmone",
+  "name": "myAppTwo",
   "app_id": "",
   "gulpStartupTasks": [
     "sass",
